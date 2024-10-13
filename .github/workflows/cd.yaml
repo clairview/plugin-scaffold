@@ -7,20 +7,20 @@ on:
             - master
 
 jobs:
-    check-package-version:
-        name: Check package version and detect an update
-        runs-on: ubuntu-20.04
-        outputs:
-            repo-version: ${{ steps.check-package-version.outputs.repo-version }}
-            published-version: ${{ steps.check-package-version.outputs.published-version }}
-            is-unpublished-version: ${{ steps.check-package-version.outputs.is-unpublished-version }}
-        steps:
-            - name: Checkout the repository
-              uses: actions/checkout@v4
-
-            - name: Check package version and detect an update
-              id: check-package-version
-              uses: ClairView/check-package-version@v1
+#    check-package-version:
+#        name: Check package version and detect an update
+#        runs-on: ubuntu-20.04
+#        outputs:
+#            repo-version: ${{ steps.check-package-version.outputs.repo-version }}
+#            published-version: ${{ steps.check-package-version.outputs.published-version }}
+#            is-unpublished-version: ${{ steps.check-package-version.outputs.is-unpublished-version }}
+#        steps:
+#            - name: Checkout the repository
+#              uses: actions/checkout@v4
+#
+#            - name: Check package version and detect an update
+#              id: check-package-version
+#              uses: ClairView/check-package-version@v1
 
     release:
         name: Publish release if new version
